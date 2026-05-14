@@ -1,0 +1,117 @@
+:root {
+    --primary: #4a90e2;
+    --success: #27ae60;
+    --danger: #e74c3c;
+    --warning: #f1c40f;
+    --dark: #2c3e50;
+    --light: #f9f9f9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: var(--dark);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 { margin-bottom: 5px; color: var(--primary); }
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.shadow { box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex: 1;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: #357abd; }
+
+.btn-add { background: var(--success); color: white; width: 100%; }
+.btn-status { background: var(--light); border: 1px solid #ddd; font-size: 11px; margin-top: 5px; }
+.btn-danger { background: var(--danger); color: white; width: 100%; margin-top: 15px; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th { background: #f8f9fa; font-size: 13px; text-transform: uppercase; }
+
+.habis {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.status-label {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.status-ada { background: #d4edda; color: #155724; }
+.status-habis { background: #f8d7da; color: #721c24; }
+
+.total-box {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #ddd;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .form-group { flex-direction: column; }
+}

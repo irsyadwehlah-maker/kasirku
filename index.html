@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kasir Mandiri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Warung Digital Kasir</h1>
+        <p>Kelola menu dan hitung belanjaan dengan mudah</p>
+    </header>
+
+    <section class="card shadow">
+        <h3><span class="icon">➕</span> Tambah atau Update Menu</h3>
+        <div class="form-group">
+            <input type="text" id="namaMakanan" placeholder="Nama makanan/minuman...">
+            <input type="number" id="hargaMakanan" placeholder="Harga (Rp)">
+            <button class="btn-primary" onclick="tambahMenu()">Simpan ke Daftar</button>
+        </div>
+    </section>
+
+    <div class="main-layout">
+        <section class="card">
+            <h3><span class="icon">📋</span> Daftar Menu & Stok</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Menu</th>
+                            <th>Harga</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listMenu">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3><span class="icon">🛒</span> Keranjang Belanja</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listKeranjang">
+                        </tbody>
+                </table>
+            </div>
+            <div class="total-box">
+                <div class="total-row">
+                    <span>Total Bayar:</span>
+                    <h2 id="totalHarga">Rp 0</h2>
+                </div>
+                <button class="btn-danger" onclick="resetKeranjang()">Bersihkan Keranjang</button>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
